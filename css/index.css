@@ -60,6 +60,10 @@ header {
   text-align: center;
 }
 
+.hide-list {
+  display: none;
+}
+
 #tasks-container ul{
   list-style: none;
 }
@@ -69,11 +73,12 @@ header {
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 15px;
+  cursor: pointer;
 }
 
 /* Regole task svolti */
 
-.strikethrough-text {
+.strikethrough-text span{
   text-decoration: line-through;
 }
 

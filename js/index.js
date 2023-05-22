@@ -54,6 +54,17 @@ createApp({
       }
       
       this.newTask = '';
+    },
+
+    // Modifica dello stato di una task
+
+    changeStatus(index) {
+
+      if (this.tasks[index].done === false) {
+        this.tasks[index].done = true;
+      } else {
+        this.tasks[index].done = false
+      }
     }
   }
 
