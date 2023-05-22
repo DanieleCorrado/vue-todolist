@@ -10,7 +10,34 @@
 
   <body>
 
-    prova
+    <!-- Intestazione pagina -->
+
+    <header>
+
+      <img id="logo" src="img/logo.png" alt="logo">
+      <h1>TO DO LIST</h1>
+
+    </header>
+
+    <!-- Sezione principale del sito -->
+
+    <main>
+
+      <div id="app" class="container">
+
+        <div id="tasks-container">
+
+          <ul>
+            <li class="task" v-for="task in tasks" :class="task.done === true ? 'strikethrough-text': ''">
+              {{ task.text }}
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </main>
 
     <!-- VueJS -->
 
