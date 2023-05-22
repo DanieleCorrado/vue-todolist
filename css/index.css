@@ -38,3 +38,7 @@ header {
 .strikethrough-text {
   text-decoration: line-through;
 }
+
+.delete-task:hover {
+  cursor: pointer;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
     <title>Todolist</title>
   </head>
@@ -28,8 +29,9 @@
         <div id="tasks-container">
 
           <ul>
-            <li class="task" v-for="task in tasks" :class="task.done === true ? 'strikethrough-text': ''">
+            <li class="task" v-for="(task, index) in tasks" :class="task.done === true ? 'strikethrough-text': ''">
               {{ task.text }}
+              <i class="fas fa-times delete-task" @click="deleteTask(index)"></i>
             </li>
           </ul>
 
@@ -44,6 +46,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- Javascript -->
+
     <script type="text/Javascript" src="js/index.js"></script>
     
   </body>
