@@ -26,7 +26,30 @@
 
       <div id="app" class="container">
 
+        <!-- Aggiungere task -->
+
+        <div class="new-task">
+
+          <!-- Inserimento del task -->
+
+          <input type="text" placeholder="Inserire task" v-model="newTask" @keyup.enter="addTask">
+          
+          <button @click="addTask">Aggiungi</button>
+          <!-- Indica errore nell'inserimento del task -->
+
+          <div id="error" v-if="error">
+
+            <small>Devi inserire una task di almeno 5 caratteri</small>
+
+          </div>
+
+        </div>
+
+        <!-- Contenitore dei tasks -->
+
         <div id="tasks-container">
+
+          <!-- Taks -->
 
           <ul>
             <li class="task" v-for="(task, index) in tasks" :class="task.done === true ? 'strikethrough-text': ''">

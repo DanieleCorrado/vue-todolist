@@ -6,12 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: lightblue;
-}
-
 header {
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,15 +14,49 @@ header {
   padding: 10px;
 }
 
+/* Regole container */
+
 .container {
   width: 70%;
   margin: 0 auto;
   height: 100vh;
-  background-color: aquamarine;
 }
 
+/* Regole new task */
+
+.new-task {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.new-task input {
+  margin-right: 40px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.new-task button {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.new-task #error {
+  margin-top: 5px;
+  color: red;
+  font-size: 20px;
+}
+
+/* Regole contenitore tasks */
+
 #tasks-container {
-  background-color: blanchedalmond;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ccc;
   text-align: center;
 }
 
@@ -35,9 +64,25 @@ header {
   list-style: none;
 }
 
+#tasks-container ul li{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 15px;
+}
+
+/* Regole task svolti */
+
 .strikethrough-text {
   text-decoration: line-through;
 }
+
+#tasks-container ul i{
+  text-decoration: none;
+}
+
+
+/* Regole tasto eliminazione task */
 
 .delete-task:hover {
   cursor: pointer;

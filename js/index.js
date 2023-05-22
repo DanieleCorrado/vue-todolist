@@ -4,6 +4,8 @@ createApp({
 
   data() {
     return {
+      error: false,
+      newTask: '',
       tasks: [
         {
           text: "prova",
@@ -26,10 +28,34 @@ createApp({
   },
 
   methods: {
+
+    // Eliminazione di una task
+
     deleteTask(index) {
 
       this.tasks.splice(index, 1);
+    },
+
+    // Inserimento di una nuova task
+
+    addTask() {
+
+      if (this.newTask !== '' && this.newTask.length >= 5) {
+
+        this.tasks.unshift({
+          text: this.newTask,
+          done: false
+        })
+
+        this.error = false;
+      } else {
+
+        this.error = true;
+      }
+      
+      this.newTask = '';
     }
   }
+
 }).mount("#app")
 
